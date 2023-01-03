@@ -1,0 +1,46 @@
+{
+"Movies" :[
+    {
+        "id": 1 ,
+        "name": "Avatar: The Way of Water (2022)",
+        "description":"Set more than a decade after the events of the first film, 'Avatar: The Way of Water' begins to tell the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+        "rate" : "4/5",
+        "image" :"https://www.lbtechreviews.com/wp-content/uploads/2022/12/Avatar-The-Way-of-Water_1-14-scaled-1-800x1185.jpg"
+    },
+    {
+        "id": 2 ,
+        "name": "Smile (2022)" ,
+        "description":"It stars Sosie Bacon as a therapist named Rose Cotter, who, after witnessing the bizarre suicide of a patient, goes through increasingly disturbing and daunting experiences, leading her to believe what she is experiencing is supernatural.",
+        "rate" :"3.7/5",
+        "image" :"https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/09/SMILE.jpeg?ssl=1"
+    },
+    {
+        "id": 3,
+        "name": "Minions: The Rise of Gru (2022)",
+        "description":"The untold story of one twelve-year-old's dream to become the world's greatest supervillain.",
+        "rate" : "4.5/5",
+        "image" : "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/222389/MRG_Psych1Sht9_BoomBox_RGB_4.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Avengers: EndGame (2019)",
+        "description":"After half of all life is snapped away by Thanos, the Avengers are left scattered and divided. Now with a way to reverse the damage, the Avengers and their allies must assemble once more and learn to put differences aside in order to work together and set things right.",
+        "rate" : "3.25/5",
+        "image" : "https://redefined.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/03/14114950/Payoff_1-Sht_Online_v6_Domestic_Sm-800x1185.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Dragon Ball Super: Broly (2018)",
+        "description": "Earth is at peace after The Tournament of Power but Goku continues to train, knowing there are ever-stronger forces in the universe. With the arrival of a Saiyan warrior named Broly, Goku and Vegeta face their most dangerous challenge yet.",
+        "rate" : "4/5",
+        "image" : "https://amc-theatres-res.cloudinary.com/v1665315371/amc-cdn/production/2/movies/58400/58408/Poster/Primary_BoxCover_HD_800_1200.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Spider-Man: No Way Home",
+        "description": "Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters the multiverse, bringing in monstrous villains that could destroy the world.",
+        "rate" :"4.8/5",
+        "image" : "https://c8.alamy.com/comp/2HJRPJP/spider-man-no-way-home-2021-directed-by-jon-watts-and-starring-tom-holland-zendaya-and-benedict-cumberbatch-with-spider-mans-identity-now-revealed-peter-asks-doctor-strange-for-help-when-a-spell-goes-wrong-dangerous-foes-from-other-worlds-start-to-appear-forcing-peter-to-discover-what-it-truly-means-to-be-spider-man-2HJRPJP.jpg"
+    }
+ ]
+}
