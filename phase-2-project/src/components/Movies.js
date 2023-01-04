@@ -1,13 +1,11 @@
 import React from "react";
 
-function Movies({movie}) {
-
+function Movies({ movie }) {
   return (
     <div className="card">
-      <img src={movie.image}/>
-      <h4>{movie.name}</h4>
-      <p>{movie.description}</p>
-      
+      <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
+      <h4>{movie.original_title}</h4>
+      <p>{movie.overview}</p>
     </div>
   );
 }
