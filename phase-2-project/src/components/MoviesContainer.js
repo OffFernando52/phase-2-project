@@ -9,7 +9,7 @@ function MoviesContainer() {
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/discover/movie?api_key=ac4c38a17f2a9e99c476dc17e3097e74&with_genres=27"
+      "https://api.themoviedb.org/3/discover/movie?api_key=ac4c38a17f2a9e99c476dc17e3097e74"
     )
       .then((response) => response.json())
       .then((movies) => setMovies(movies.results));
