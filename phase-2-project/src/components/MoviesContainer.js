@@ -3,8 +3,9 @@ import MovieCard from "./MovieCard";
 import Search from "./Search";
 
 function MoviesContainer() {
+  const IMAGE_PATH = "http://image.tmdb.org/t/p/w1280";
   const [movies, setMovies] = useState([]);
-
+  const [selectMovie, setSelectMovie] = useState({});
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -14,6 +15,10 @@ function MoviesContainer() {
       .then((response) => response.json())
       .then((movies) => setMovies(movies.results));
   }, []);
+
+  function nowClicked(movie) {
+    setSelectMovie(movie);
+  }
 
   function updateSearch(searchInput) {
     setSearch(searchInput);
@@ -26,7 +31,20 @@ function MoviesContainer() {
   return (
     <main>
       <Search search={search} updateSearch={updateSearch} />
-      <MovieCard movies={filteredMovies} />
+      <div className="hero">
+        <div
+          className="hero-content max-center"
+          style={{
+            backgroundImage: `url('${IMAGE_PATH}${selectMovie.backdrop_path}`,
+          }}
+        >
+          <h1 className={"hero-title"}>{selectMovie.title} </h1>
+          {selectMovie.overview ? (
+            <p className={"hero-overview"}>{selectMovie.overview}</p>
+          ) : null}
+        </div>
+      </div>
+      <MovieCard movies={filteredMovies} nowClicked={nowClicked} />
     </main>
   );
 }
