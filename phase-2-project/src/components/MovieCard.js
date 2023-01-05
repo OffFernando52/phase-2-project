@@ -1,17 +1,17 @@
 import React from "react";
 import Movies from "./Movies";
 
-function MovieCard({ movies }) {
-  console.log(movies);
+function MovieCard({ movies, nowClicked }) {
+
   return (
     <div className="cards">
       {movies.map((movie) => (
-        <Movies
+        <Movies nowClicked={nowClicked}
           movie={movie}
           key={movie.id}
-          name={movie.original_title}
-          description={movie.overview}
-          rate={movie.popularity}
+          // name={movie.original_title}
+          // description={movie.overview}
+          // rate={movie.popularity}
           image={movie.poster_path}
         />
       ))}
