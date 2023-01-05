@@ -3,6 +3,7 @@
   background-position: top center;
   background-size: cover;
   display: flex;
+
 }
 .hero-content {
   max-width: 70px;
@@ -52,16 +53,49 @@ body {
 h2 {
   margin-bottom: 1rem;
 }
-button {
-  padding: 0.25rem 1rem;
-  font-family: inherit;
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  vertical-align:middle;
+  background-color: #000000;
   border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  width: 375px;
+  transition: all 0.5s;
   cursor: pointer;
+  margin: 5px;
+  height: 0%;
+
 }
-button.primary {
-  background-color: var(--green);
-  color: white;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
 .app {
   margin: 0 auto;
   max-width: 1200px;
@@ -75,7 +109,7 @@ header h1 {
 .logo {
   font-size: 1.25em;
   padding-left: 0.5rem;
-  color: transparent;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 0 var(--green);
 }
 main {

@@ -1,16 +1,10 @@
 import { type } from "@testing-library/user-event/dist/type";
 import React, { useState } from "react";
-
-function IdeaForm() {
+function IdeaForm({ addIdea }) {
   const [content_type, setContent_type] = useState("");
   const [title, setTitle] = useState("");
   const [overview, setOverview] = useState("");
   const [genres, setGenres] = useState([]);
-  console.log(content_type);
-  console.log(title);
-  console.log(overview);
-  console.log(genres);
-
   function genreSelector(e) {
     const newGenre = e.target.value;
     if (genres.includes(newGenre) == false) {
@@ -24,10 +18,31 @@ function IdeaForm() {
       setGenres(newGenres);
     }
   }
-
+  function submitForm(e) {
+    e.preventDefault();
+    let newIdea = {
+      content_type: content_type,
+      title: title,
+      overview: overview,
+      genres: genres,
+    };
+    const configObj = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content_type: content_type,
+        title: title,
+        overview: overview,
+        genres: genres,
+      }),
+    };
+    fetch("http://localhost:3001/ideas", configObj)
+      .then((res) => res.json())
+      .then((data) => addIdea(data));
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={submitForm}>
         <h3>Will this be a TV Show or Movie?</h3>
         <br />
         <label for="movie">
@@ -113,11 +128,18 @@ function IdeaForm() {
             onChange={(e) => genreSelector(e)}
           ></input>
         </label>
-
         <input type="submit"></input>
       </form>
     </div>
   );
 }
-
 export default IdeaForm;
+
+
+
+
+
+
+
+
+

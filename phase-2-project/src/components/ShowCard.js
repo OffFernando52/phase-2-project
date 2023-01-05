@@ -1,12 +1,12 @@
 import React from "react";
 import Shows from "./Shows";
 
-function ShowCard({ shows }) {
-  console.log(shows);
+function ShowCard({ shows, nowClicked }) {
   return (
     <div className="cards">
       {shows.map((show) => (
         <Shows
+        nowClicked={nowClicked}
           show={show}
           key={show.id}
           name={show.name}

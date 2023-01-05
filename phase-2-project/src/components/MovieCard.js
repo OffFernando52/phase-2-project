@@ -2,7 +2,7 @@ import React from "react";
 import Movies from "./Movies";
 
 function MovieCard({ movies, nowClicked }) {
-  console.log(movies);
+  
   return (
     <div className="cards">
       {movies.map((movie) => (

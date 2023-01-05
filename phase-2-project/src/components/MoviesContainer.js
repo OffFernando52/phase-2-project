@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import Search from "./Search";
+import TvContainer from "./TvContainer";
 
 function MoviesContainer() {
   const IMAGE_PATH = "http://image.tmdb.org/t/p/w1280";
   const [movies, setMovies] = useState([]);
-  const [selectMovie, setSelectMovie] = useState({});
+  const [selectMovie, setSelectMovie] = useState({
+    overview:"Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive",
+    title:"Avatar: The Way of Water",
+    backdrop_path: "/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg"
+  });
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -20,14 +25,18 @@ function MoviesContainer() {
     setSelectMovie(movie);
   }
 
+
   function updateSearch(searchInput) {
     setSearch(searchInput);
   }
-  console.log(movies);
+  
   let filteredMovies = movies.filter((movie) =>
     movie.original_title.toLowerCase().startsWith(search.toLowerCase())
   );
-  console.log(filteredMovies);
+
+  
+  
+  
   return (
     <main>
       <Search search={search} updateSearch={updateSearch} />
@@ -45,6 +54,7 @@ function MoviesContainer() {
         </div>
       </div>
       <MovieCard movies={filteredMovies} nowClicked={nowClicked} />
+     
     </main>
   );
 }

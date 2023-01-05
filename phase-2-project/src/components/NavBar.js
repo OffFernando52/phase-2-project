@@ -4,23 +4,23 @@ import { Outlet, Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav>
-      <header>
+      <header className="logo">
         <h1>
-          Movies
+          CinePolis
           <span role="img">🎬🍿 </span>
         </h1>
+      <div>
+      <button className="button"><span>  <Link to="/">Home</Link></span></button>
+  
+        
+        <button className="button"><span>
+          <Link to="/movies">Movies</Link></span>
+        </button>
+        <button className="button"><span>
+          <Link to="/tv">TV Shows</Link></span>
+        </button>
+      </div>
       </header>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/movies">Movies</Link>
-        </li>
-        <li>
-          <Link to="/tv">TV Shows</Link>
-        </li>
-      </ul>
     </nav>
   );
 }

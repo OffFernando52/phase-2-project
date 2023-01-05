@@ -1,11 +1,24 @@
 {
-  "Ideas": [
+  "ideas": [
     {
       "id": 1,
-      "content_type": "Movie",
+      "content_type": "movie",
       "title": "Columbus` Fight for the New World",
       "overview": "Columbus discovers the new world and encounters more than he bargained for in this sci-fi take of the exploration of the Americas.",
-      "genres": ["Action/Adventure", "Drama"]
+      "genres": [
+        "Action/Adventure",
+        "Drama"
+      ]
+    },
+    {
+      "content_type": "movie",
+      "title": "Somewhere Under the Rainbow",
+      "overview": "A magical leprechaun fights for his life against the unseen creatures that hide deep under the rainbow",
+      "genres": [
+        "Drama",
+        "Horror"
+      ],
+      "id": 2
     }
   ]
 }
