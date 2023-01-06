@@ -1,5 +1,6 @@
 import { type } from "@testing-library/user-event/dist/type";
 import React, { useState } from "react";
+
 function IdeaForm({ addIdea }) {
   const [content_type, setContent_type] = useState("");
   const [title, setTitle] = useState("");
@@ -134,12 +135,3 @@ function IdeaForm({ addIdea }) {
   );
 }
 export default IdeaForm;
-
-
-
-
-
-
-
-
-
