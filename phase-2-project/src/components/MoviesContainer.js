@@ -7,9 +7,10 @@ function MoviesContainer() {
   const IMAGE_PATH = "http://image.tmdb.org/t/p/w1280";
   const [movies, setMovies] = useState([]);
   const [selectMovie, setSelectMovie] = useState({
-    overview:"Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive",
-    title:"Avatar: The Way of Water",
-    backdrop_path: "/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg"
+    overview:
+      "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+    title: "Avatar: The Way of Water",
+    backdrop_path: "/5gPQKfFJnl8d1edbkOzKONo4mnr.jpg",
   });
   const [search, setSearch] = useState("");
 
@@ -25,18 +26,14 @@ function MoviesContainer() {
     setSelectMovie(movie);
   }
 
-
   function updateSearch(searchInput) {
     setSearch(searchInput);
   }
-  
+
   let filteredMovies = movies.filter((movie) =>
     movie.original_title.toLowerCase().startsWith(search.toLowerCase())
   );
 
-  
-  
-  
   return (
     <main>
       <Search search={search} updateSearch={updateSearch} />
@@ -54,7 +51,6 @@ function MoviesContainer() {
         </div>
       </div>
       <MovieCard movies={filteredMovies} nowClicked={nowClicked} />
-     
     </main>
   );
 }

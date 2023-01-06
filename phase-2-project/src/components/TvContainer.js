@@ -7,9 +7,10 @@ function TvContainer() {
   const IMAGE_PATH = "http://image.tmdb.org/t/p/w1280";
   const [search, setSearch] = useState("");
   const [selectMovie, setSelectMovie] = useState({
-    overview:"Wednesday Addams is sent to Nevermore Academy, a bizarre boarding school where she attempts to master her psychic powers, stop a monstrous killing spree of the town citizens",
-    name:"Wednesday",
-    backdrop_path: "/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg"
+    overview:
+      "Wednesday Addams is sent to Nevermore Academy, a bizarre boarding school where she attempts to master her psychic powers, stop a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago — all while navigating her new relationships.",
+    name: "Wednesday",
+    backdrop_path: "/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg",
   });
   useEffect(() => {
     fetch(
@@ -26,7 +27,7 @@ function TvContainer() {
   function updateSearch(searchInput) {
     setSearch(searchInput);
   }
-  
+
   let filteredShows = shows.filter(
     (show) =>
       show.name.toLowerCase().startsWith(search.toLowerCase()) &&
@@ -48,11 +49,9 @@ function TvContainer() {
             <p className={"hero-overview"}>{selectMovie.overview}</p>
           ) : null}
         </div>
-        </div>
-      <ShowCard shows={filteredShows} nowClicked={nowClicked}/>
-      
+      </div>
+      <ShowCard shows={filteredShows} nowClicked={nowClicked} />
     </main>
-
   );
 }
 

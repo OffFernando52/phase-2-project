@@ -19,6 +19,25 @@
         "Horror"
       ],
       "id": 2
+    },
+    {
+      "content_type": "movie",
+      "title": "JosyBear",
+      "overview": "Josy is a bear ",
+      "genres": [
+        "Horror"
+      ],
+      "id": 3
+    },
+    {
+      "content_type": "tv",
+      "title": "The Dash Board",
+      "overview": "Ayyaana got lost in a dashboard.",
+      "genres": [
+        "Horror",
+        "Drama"
+      ],
+      "id": 4
     }
   ]
 }
